@@ -1,0 +1,46 @@
+{
+  "name": "@reworkjs/babel-preset-reworkjs",
+  "version": "0.0.1",
+  "description": "The babel preset for applications built using ReworkJS (optional)",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib --copy-files",
+    "build:watch": "npm run build -- --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/reworkjs/babel-preset-reworkjs.git"
+  },
+  "keywords": [
+    "ReworkJS",
+    "babel"
+  ],
+  "author": "Guylian Cox <gc@madkings.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reworkjs/babel-preset-reworkjs/issues"
+  },
+  "homepage": "https://github.com/reworkjs/babel-preset-reworkjs#readme",
+  "dependencies": {
+    "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-async-to-generator": "^6.22.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.3.2",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.22.0",
+    "babel-preset-es2017": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0"
+  },
+  "devDependencies": {
+    "@foobarhq/eslint-config": "^1.0.1",
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "eslint": "^3.18.0"
+  }
+}
