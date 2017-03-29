@@ -16,7 +16,7 @@ export default function () {
   return {
     presets: [
       react,
-      [es2015, { modules: false }],
+      es2015.buildPreset({}, { modules: false }),
       es2016,
       es2017,
       stage0,
