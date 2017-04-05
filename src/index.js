@@ -1,11 +1,7 @@
 import react from 'babel-preset-react';
-import es2015 from 'babel-preset-es2015';
-import es2016 from 'babel-preset-es2016';
-import es2017 from 'babel-preset-es2017';
+import env from 'babel-preset-env';
 import stage0 from 'babel-preset-stage-0';
 import decorators from 'babel-plugin-transform-decorators-legacy';
-import asyncFunctionSyntax from 'babel-plugin-syntax-async-functions';
-import asyncFunctionTransform from 'babel-plugin-transform-async-to-generator';
 import flow from 'babel-plugin-transform-flow-strip-types';
 import lodash from 'babel-plugin-lodash';
 import reactPropTypes from 'babel-plugin-transform-react-remove-prop-types';
@@ -16,19 +12,25 @@ export default function () {
   return {
     presets: [
       react,
-      es2015.buildPreset({}, { modules: false }),
-      es2016,
-      es2017,
+      env.default({}, {
+        // replace 'babel-polyfill' with individual polyfills matching the target
+        useBuiltIns: true,
+        // let webpack handle ES modules
+        modules: false,
+        targets: {
+          uglify: true,
+          browsers: ['> 0.5%'],
+        },
+      }),
       stage0,
     ],
     plugins: [
       decorators,
-      asyncFunctionSyntax,
-      asyncFunctionTransform,
       flow,
       lodash,
     ],
     env: {
+      // TODO add react-hmre in dev
       production: {
         plugins: [
           reactPropTypes,
