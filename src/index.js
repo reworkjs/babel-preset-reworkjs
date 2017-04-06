@@ -12,7 +12,7 @@ export default function () {
   return {
     presets: [
       react,
-      env.default({}, {
+      env({}, {
         // replace 'babel-polyfill' with individual polyfills matching the target
         useBuiltIns: true,
         // let webpack handle ES modules
