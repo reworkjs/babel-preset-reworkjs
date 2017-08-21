@@ -7,6 +7,7 @@ import lodash from 'babel-plugin-lodash';
 import reactPropTypes from 'babel-plugin-transform-react-remove-prop-types';
 import reactSingletons from 'babel-plugin-transform-react-constant-elements';
 import reactInline from 'babel-plugin-transform-react-inline-elements';
+import reactIntlAuto from 'babel-plugin-react-intl-auto';
 
 export default function () {
   return {
@@ -28,6 +29,7 @@ export default function () {
       decorators,
       flow,
       lodash,
+      reactIntlAuto,
     ],
     env: {
       // TODO add react-hmre in dev

@@ -24,20 +24,20 @@
   "homepage": "https://github.com/reworkjs/babel-preset-reworkjs#readme",
   "dependencies": {
     "babel-plugin-lodash": "^3.2.11",
+    "babel-plugin-react-intl-auto": "^0.8.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-react-constant-elements": "^6.23.0",
     "babel-plugin-transform-react-inline-elements": "^6.22.0",
-    "babel-plugin-transform-react-remove-prop-types": "^0.3.2",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-react": "^6.23.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.8",
+    "babel-preset-react": "^6.24.1",
     "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-0": "^6.22.0"
+    "babel-preset-stage-0": "^6.24.1"
   },
   "devDependencies": {
-    "@foobarhq/eslint-config": "^1.0.1",
-    "babel-cli": "^6.24.0",
-    "babel-preset-env": "^1.3.2",
-    "eslint": "^3.19.0"
+    "@foobarhq/eslint-config": "^3.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.5.0"
   }
 }
