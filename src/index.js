@@ -2,7 +2,6 @@ import react from 'babel-preset-react';
 import env from 'babel-preset-env';
 import stage0 from 'babel-preset-stage-0';
 import decorators from 'babel-plugin-transform-decorators-legacy';
-import flow from 'babel-plugin-transform-flow-strip-types';
 import lodash from 'babel-plugin-lodash';
 import reactPropTypes from 'babel-plugin-transform-react-remove-prop-types';
 import reactSingletons from 'babel-plugin-transform-react-constant-elements';
@@ -27,7 +26,6 @@ export default function () {
     ],
     plugins: [
       decorators,
-      flow,
       lodash,
       reactIntlAuto,
     ],
