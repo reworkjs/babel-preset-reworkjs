@@ -8,13 +8,16 @@ import reactSingletons from 'babel-plugin-transform-react-constant-elements';
 import reactInline from 'babel-plugin-transform-react-inline-elements';
 import reactIntlAuto from 'babel-plugin-react-intl-auto';
 
-export default function () {
+export default function buildConfig() {
+
   return {
     presets: [
       react,
       env({}, {
+
         // replace 'babel-polyfill' with individual polyfills matching the target
         useBuiltIns: true,
+
         // let webpack handle ES modules
         modules: false,
         targets: {
@@ -30,6 +33,7 @@ export default function () {
       reactIntlAuto,
     ],
     env: {
+
       // TODO add react-hmre in dev
       production: {
         plugins: [
